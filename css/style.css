@@ -1,0 +1,54 @@
+body {
+  font-family: 'Courier New', Courier, monospace;
+  background-color: #2b2c25;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  text-align: center;
+  min-width: 100px;
+}
+
+.typewriter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.typewriter p::selection,
+.typewriter p b::selection {
+  background-color: #6CBC0C;
+  color: black;
+}
+
+p {
+  color: #b9b7b6;
+  white-space: nowrap;
+  overflow: hidden;
+  font-size: 24px;
+  width: 0;              /* O texto começa invisível */
+  visibility: hidden;     /* As linhas são visíveis quando o JS ativa */
+  border-right: 5px solid black;  /* Cursor piscante */
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: #6CBC0C; }
+}
+
+.typing {
+  visibility: visible; /* Torna o texto visível */
+  animation: typing 3s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+.typing.done {
+  border-right: none;  /* Remove o cursor piscante */
+  width: 100%;         /* Mantém o texto completamente visível */
+}

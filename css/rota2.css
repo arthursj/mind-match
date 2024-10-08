@@ -1,0 +1,38 @@
+* {
+  list-style: none;
+  border: none;
+  font-family: "Press Start 2P", cursive;
+  background-color: #dad464;
+  color: white;
+}
+
+*::selection {
+  background-color: #fefe46;
+  color: black;
+}
+
+h1 {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.login-form {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 70vh;
+  justify-content: center;
+}
+
+.login__header {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.login__header img {
+  width: 250px;
+}
